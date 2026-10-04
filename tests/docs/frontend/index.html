@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SAHAAYA | Social Support & Civic Assistance</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #172033;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #172554;
+      color: white;
+      padding: 20px 8%;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .tagline {
+      margin-top: 5px;
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    .hero {
+      padding: 60px 8% 35px;
+      text-align: center;
+      background: white;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+      color: #172554;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      line-height: 1.7;
+      color: #5b6475;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+    }
+
+    .card h2 {
+      color: #172554;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #667085;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 130px;
+      border: 1px solid #d0d5dd;
+      border-radius: 10px;
+      padding: 15px;
+      font-size: 16px;
+      resize: vertical;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: #172554;
+    }
+
+    button {
+      margin-top: 15px;
+      background: #172554;
+      color: white;
+      border: none;
+      padding: 13px 24px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #263a78;
+    }
+
+    #result {
+      display: none;
+      margin-top: 25px;
+      padding: 22px;
+      border-radius: 12px;
+      background: #eef4ff;
+      border-left: 5px solid #172554;
+    }
+
+    #result h3 {
+      margin-bottom: 10px;
+      color: #172554;
+    }
+
+    #result p {
+      margin-bottom: 8px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .category {
+      background: #f8fafc;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #e4e7ec;
+      text-align: center;
+    }
+
+    .notice {
+      font-size: 13px;
+      color: #667085;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #667085;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">SAHAAYA</div>
+    <div class="tagline">
+      AI-Assisted Social Support & Civic Assistance
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Technology That Stands With People.</h1>
+    <p>
+      Describe your social or civic concern in simple words.
+      SAHAAYA helps identify the type of support you may need
+      and guides you toward an appropriate next step.
+    </p>
+  </section>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>How can we help?</h2>
+
+      <p>
+        You do not need to know the name of a department,
+        organization or service. Just describe your problem.
+      </p>
+
+      <textarea
+        id="userInput"
+        placeholder="Example: I don't know where to report a civic problem in my area..."
+      ></textarea>
+
+      <button onclick="analyzeConcern()">
+        Find Support
+      </button>
+
+      <div id="result">
+        <h3 id="resultTitle"></h3>
+        <p id="resultCategory"></p>
+        <p id="resultGuidance"></p>
+        <p id="resultNextStep"></p>
+      </div>
+
+      <div class="notice">
+        SAHAAYA is a prototype for support navigation.
+        It does not replace emergency services, professional advice,
+        or official authorities.
+      </div>
+    </section>
+
+    <section class="card">
+
+      <h2>Support Areas</h2>
+
+      <p>
+        SAHAAYA is designed to assist users across different
+        social and civic-support categories.
+      </p>
+
+      <div class="categories">
+
+        <div class="category">
+          Women & Social Support
+        </div>
+
+        <div class="category">
+          Civic Assistance
+        </div>
+
+        <div class="category">
+          Digital Inclusion
+        </div>
+
+        <div class="category">
+          Community Support
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    SAHAAYA • Justice League • Hack for Social Cause
+  </footer>
+
+  <script>
+
+    function analyzeConcern() {
+
+      const input =
+        document.getElementById("userInput").value
+        .trim()
+        .toLowerCase();
+
+      const result =
+        document.getElementById("result");
+
+      const title =
+        document.getElementById("resultTitle");
+
+      const category =
+        document.getElementById("resultCategory");
+
+      const guidance =
+        document.getElementById("resultGuidance");
+
+      const nextStep =
+        document.getElementById("resultNextStep");
+
+      if (!input) {
+
+        result.style.display = "block";
+
+        title.textContent = "Please describe your concern.";
+
+        category.textContent =
+          "Category: Information required";
+
+        guidance.textContent =
+          "Tell us a little more about the problem you are facing.";
+
+        nextStep.textContent =
+          "Next step: Provide more details so SAHAAYA can identify the appropriate support category.";
+
+        return;
+      }
+
+      let detectedCategory = "";
+      let detectedGuidance = "";
+      let detectedNextStep = "";
+
+      if (
+        input.includes("harass") ||
+        input.includes("violence") ||
+        input.includes("woman") ||
+        input.includes("women") ||
+        input.includes("abuse") ||
+        input.includes("gender")
+      ) {
+
+        detectedCategory =
+          "Women / Social Support";
+
+        detectedGuidance =
+          "Your concern appears to relate to social or women-focused support.";
+
+        detectedNextStep =
+          "Next step: Identify an appropriate verified support service or official authority.";
+
+      } else if (
+        input.includes("road") ||
+        input.includes("garbage") ||
+        input.includes("waste") ||
+        input.includes("street") ||
+        input.includes("civic") ||
+        input.includes("water") ||
+        input.includes("drainage")
+      ) {
+
+        detectedCategory =
+          "Civic Assistance";
+
+        detectedGuidance =
+          "Your concern appears to relate to a civic or community service.";
+
+        detectedNextStep =
+          "Next step: Identify the appropriate civic reporting or service pathway.";
+
+      } else if (
+        input.includes("internet") ||
+        input.includes("digital") ||
+        input.includes("online") ||
+        input.includes("technology")
+      ) {
+
+        detectedCategory =
+          "Digital Inclusion";
+
+        detectedGuidance =
+          "Your concern appears to involve access to or use of digital services.";
+
+        detectedNextStep =
+          "Next step: Identify an appropriate digital-support resource.";
+
+      } else {
+
+        detectedCategory =
+          "General Support";
+
+        detectedGuidance =
+          "SAHAAYA needs more information to accurately understand your concern.";
+
+        detectedNextStep =
+          "Next step: Provide additional details instead of making an unsupported assumption.";
+
+      }
+
+      result.style.display = "block";
+
+      title.textContent =
+        "SAHAAYA Support Assessment";
+
+      category.textContent =
+        "Category: " + detectedCategory;
+
+      guidance.textContent =
+        "Guidance: " + detectedGuidance;
+
+      nextStep.textContent =
+        detectedNextStep;
+    }
+
+  </script>
+
+</body>
+</html>
