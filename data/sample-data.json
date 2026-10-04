@@ -1,0 +1,33 @@
+{
+  "project": "SAHAAYA",
+  "description": "Sample support-resource data for prototype testing",
+  "resources": [
+    {
+      "id": "R001",
+      "category": "women_support",
+      "title": "Women Support Resource",
+      "description": "Sample entry representing a women-focused support service.",
+      "type": "support_service",
+      "location": "Tamil Nadu",
+      "status": "sample"
+    },
+    {
+      "id": "R002",
+      "category": "civic_support",
+      "title": "Civic Assistance Resource",
+      "description": "Sample entry representing a civic-service guidance resource.",
+      "type": "civic_service",
+      "location": "Tamil Nadu",
+      "status": "sample"
+    },
+    {
+      "id": "R003",
+      "category": "digital_inclusion",
+      "title": "Digital Assistance Resource",
+      "description": "Sample entry representing a digital-access support resource.",
+      "type": "community_support",
+      "location": "Tamil Nadu",
+      "status": "sample"
+    }
+  ]
+}
