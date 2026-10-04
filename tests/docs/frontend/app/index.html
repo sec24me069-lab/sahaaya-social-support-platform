@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SAHAAYA | Social Support & Welfare Navigator</title>
+
+    <meta
+        name="description"
+        content="SAHAAYA is an AI-powered social support and welfare navigation platform that helps people discover relevant schemes, services and next steps."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="brand">
+            <div class="brand-mark">S</div>
+
+            <div>
+                <h1>SAHAAYA</h1>
+                <p>Know. Qualify. Apply.</p>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <button class="nav-btn active" data-section="home">
+                Home
+            </button>
+
+            <button class="nav-btn" data-section="check">
+                Check Eligibility
+            </button>
+
+            <button class="nav-btn" data-section="dashboard">
+                My Support
+            </button>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- ================= HOME ================= -->
+
+        <section id="home" class="section active-section">
+
+            <div class="hero">
+
+                <div class="hero-content">
+
+                    <span class="eyebrow">
+                        AI-POWERED SOCIAL SUPPORT
+                    </span>
+
+                    <h2>
+                        Find the support
+                        <span>you may be entitled to.</span>
+                    </h2>
+
+                    <p class="hero-description">
+                        SAHAAYA helps you understand your situation,
+                        discover relevant welfare support, check basic
+                        eligibility and identify the next steps to apply.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <button
+                            class="primary-btn"
+                            id="startBtn"
+                        >
+                            Check My Eligibility
+                            <span>→</span>
+                        </button>
+
+                        <button
+                            class="secondary-btn"
+                            id="exploreBtn"
+                        >
+                            Explore Support
+                        </button>
+
+                    </div>
+
+                    <div class="trust-row">
+
+                        <div>
+                            <strong>01</strong>
+                            <span>Understand</span>
+                        </div>
+
+                        <div>
+                            <strong>02</strong>
+                            <span>Match</span>
+                        </div>
+
+                        <div>
+                            <strong>03</strong>
+                            <span>Act</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO VISUAL -->
+
+                <div class="hero-card">
+
+                    <div class="card-glow"></div>
+
+                    <div class="assistant-icon">
+                        S
+                    </div>
+
+                    <p class="small-label">
+                        SAHAAYA ASSISTANT
+                    </p>
+
+                    <h3>
+                        What support
+                        <br>
+                        do you need?
+                    </h3>
+
+                    <div class="mini-option">
+                        <span>♀</span>
+                        Women & Family Support
+                    </div>
+
+                    <div class="mini-option">
+                        <span>₹</span>
+                        Financial Assistance
+                    </div>
+
+                    <div class="mini-option">
+                        <span>⌂</span>
+                        Housing & Basic Needs
+                    </div>
+
+                    <div class="mini-option">
+                        <span>◉</span>
+                        Education & Skills
+                    </div>
+
+                    <div class="confidence-mini">
+                        <span></span>
+                        Transparent matching
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- WHY SAHAAYA -->
+
+            <div class="home-section">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        WHY SAHAAYA
+                    </span>
+
+                    <h2>
+                        From confusion to
+                        <span>clear action.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <article class="feature-card">
+
+                        <div class="feature-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Understand your need
+                        </h3>
+
+                        <p>
+                            Tell SAHAAYA about your situation
+                            using simple questions.
+                        </p>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Find relevant support
+                        </h3>
+
+                        <p>
+                            Match your profile and life situation
+                            with relevant support opportunities.
+                        </p>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Know what to do next
+                        </h3>
+
+                        <p>
+                            Get documents, confidence information
+                            and application guidance.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= ELIGIBILITY ================= -->
+
+        <section
+            id="check"
+            class="section"
+        >
+
+            <div class="check-container">
+
+                <div class="section-heading center">
+
+                    <span class="eyebrow">
+                        SUPPORT MATCHING
+                    </span>
+
+                    <h2>
+                        Let's understand
+                        <span>your situation.</span>
+                    </h2>
+
+                    <p>
+                        Answer a few questions. SAHAAYA will
+                        identify potentially relevant support.
+                    </p>
+
+                </div>
+
+
+                <!-- PROGRESS -->
+
+                <div class="progress-container">
+
+                    <div class="progress-info">
+                        <span id="questionProgress">
+                            Question 1 of 6
+                        </span>
+
+                        <span id="progressPercent">
+                            16%
+                        </span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div
+                            id="progressFill"
+                            class="progress-fill"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <!-- QUESTION CARD -->
+
+                <div
+                    id="questionCard"
+                    class="question-card"
+                >
+
+                    <span
+                        id="questionCategory"
+                        class="question-category"
+                    >
+                        PROFILE
+                    </span>
+
+                    <h3 id="questionTitle">
+                        What best describes you?
+                    </h3>
+
+                    <p id="questionDescription">
+                        Select the option that best represents
+                        your current situation.
+                    </p>
+
+                    <div
+                        id="answerOptions"
+                        class="answer-options"
+                    >
+
+                        <button
+                            class="answer-option"
+                            data-value="woman"
+                        >
+                            <span class="option-icon">
+                                ♀
+                            </span>
+
+                            <span>
+                                <strong>Woman</strong>
+                                <small>
+                                    I am seeking support for myself
+                                </small>
+                            </span>
+
+                            <span class="option-arrow">
+                                →
+                            </span>
+                        </button>
+
+
+                        <button
+                            class="answer-option"
+                            data-value="man"
+                        >
+                            <span class="option-icon">
+                                ♂
+                            </span>
+
+                            <span>
+                                <strong>Man</strong>
+                                <small>
+                                    I am seeking support for myself
+                                </small>
+                            </span>
+
+                            <span class="option-arrow">
+                                →
+                            </span>
+                        </button>
+
+
+                        <button
+                            class="answer-option"
+                            data-value="family"
+                        >
+                            <span class="option-icon">
+                                ♡
+                            </span>
+
+                            <span>
+                                <strong>Family / Caregiver</strong>
+                                <small>
+                                    I am seeking support for my family
+                                </small>
+                            </span>
+
+                            <span class="option-arrow">
+                                →
+                            </span>
+                        </button>
+
+
+                        <button
+                            class="answer-option"
+                            data-value="other"
+                        >
+                            <span class="option-icon">
+                                •
+                            </span>
+
+                            <span>
+                                <strong>Other</strong>
+                                <small>
+                                    I need help understanding my options
+                                </small>
+                            </span>
+
+                            <span class="option-arrow">
+                                →
+                            </span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BACK -->
+
+                <button
+                    id="backBtn"
+                    class="back-btn hidden"
+                >
+                    ← Previous question
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= RESULTS ================= -->
+
+        <section
+            id="results"
+            class="section"
+        >
+
+            <div class="results-container">
+
+                <div class="results-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            SAHAAYA MATCH RESULTS
+                        </span>
+
+                        <h2>
+                            Support identified
+                            <span>for you.</span>
+                        </h2>
+
+                        <p>
+                            Based on the information you provided,
+                            these are potential matches for further verification.
+                        </p>
+
+                    </div>
+
+                    <div class="match-score">
+
+                        <strong id="overallScore">
+                            0%
+                        </strong>
+
+                        <span>
+                            Match confidence
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BENEFIT SUMMARY -->
+
+                <div class="summary-grid">
+
+                    <div class="summary-card">
+
+                        <span>
+                            Potential matches
+                        </span>
+
+                        <strong id="matchCount">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-card">
+
+                        <span>
+                            Estimated annual support
+                        </span>
+
+                        <strong id="benefitTotal">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-card">
+
+                        <span>
+                            Documents to prepare
+                        </span>
+
+                        <strong id="documentCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SCHEME LIST -->
+
+                <div class="results-layout">
+
+                    <div>
+
+                        <div class="results-title-row">
+
+                            <h3>
+                                Recommended support
+                            </h3>
+
+                            <span class="demo-label">
+                                PROTOTYPE DATA
+                            </span>
+
+                        </div>
+
+                        <div
+                            id="schemeResults"
+                            class="scheme-results"
+                        >
+                        </div>
+
+                    </div>
+
+
+                    <!-- DOCUMENT PANEL -->
+
+                    <aside class="documents-panel">
+
+                        <span class="eyebrow">
+                            PREPARE
+                        </span>
+
+                        <h3>
+                            Common documents
+                        </h3>
+
+                        <p>
+                            Documents may vary by scheme.
+                            Always verify requirements on the
+                            official application portal.
+                        </p>
+
+                        <ul id="documentList">
+                        </ul>
+
+                    </aside>
+
+                </div>
+
+
+                <div class="results-footer">
+
+                    <button
+                        class="secondary-btn"
+                        id="restartBtn"
+                    >
+                        Start Again
+                    </button>
+
+                    <button
+                        class="primary-btn"
+                        id="dashboardBtn"
+                    >
+                        Save to My Support →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section
+            id="dashboard"
+            class="section"
+        >
+
+            <div class="dashboard-container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        MY SUPPORT
+                    </span>
+
+                    <h2>
+                        Your support
+                        <span>journey.</span>
+                    </h2>
+
+                    <p>
+                        Saved recommendations and next steps
+                        stay available on this device.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="savedSupport"
+                    class="saved-support"
+                >
+
+                    <div class="empty-dashboard">
+
+                        <div class="empty-icon">
+                            S
+                        </div>
+
+                        <h3>
+                            Nothing saved yet
+                        </h3>
+
+                        <p>
+                            Complete the eligibility check
+                            to save potential support options here.
+                        </p>
+
+                        <button
+                            class="primary-btn"
+                            id="dashboardStartBtn"
+                        >
+                            Check Eligibility →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-brand">
+
+            <strong>
+                SAHAAYA
+            </strong>
+
+            <span>
+                Technology that stands with people.
+            </span>
+
+        </div>
+
+        <div class="footer-note">
+
+            Prototype for social-impact innovation.
+
+            <br>
+
+            Information shown in this prototype is for
+            demonstration and must be verified through
+            official government sources before application.
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="app.js"></script>
+
+</body>
+</html>
